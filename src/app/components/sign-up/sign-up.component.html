@@ -1,0 +1,47 @@
+<div class="container efecto">
+  <div class="row justify-content-center">
+      <div class="col-8">
+        <div class="displayTable cuadro">
+          <div class="displayTableCell">
+            <div class="authBlock">
+              <div>
+                <h1 class="titulo">formulario de registro</h1>
+              </div>
+              <div class="margen">
+                <br>
+                <div class="form-group">
+                  <input type="email" class="form-control" placeholder="Email Address" #userEmail required>
+                </div>
+                <div class="form-group">
+                  <input type="password" class="form-control" placeholder="Password" #userPwd required>
+                </div>
+                <div class="form-group">
+                  <input type="button" class="btn btn-success alejate" value="Registrarse" (click)="authService.SignUp(userEmail.value, userPwd.value)">
+                  <span class="or"><span class="orInner alejate">O</span></span>
+                  <button type="button" class="btn btn-warning alejate" (click)="authService.GoogleAuth()">
+                    <i class="fab fa-google-plus-g"></i>
+                    Continuar con Google
+                  </button>
+                  <button type="button" class="btn btn-primary alejate" (click)="authService.FacebookAuth()">
+                    <i class="fab fa-facebook"></i>
+                    Continuar con Facebook
+                  </button>
+                </div>
+                <br>
+              </div>
+              <div class="margen2">
+                <div class="redirectToLogin">
+                  <span>Ya tienes unas cuenta? <span class="redirect" routerLink="/sign-in">Ingresa</span></span>
+              </div>   
+            </div>
+
+          </div>
+         </div>
+      </div>
+    </div>
+    <div class="col-4">
+      <img class="ajustada" src="https://www.flaticon.es/svg/static/icons/svg/1792/1792355.svg">
+    </div>
+    <!-- Aca esta la caja contenido -->
+  </div>
+</div>

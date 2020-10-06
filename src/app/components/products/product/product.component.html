@@ -1,0 +1,57 @@
+
+<div class="panel">
+    <div class="card-body">
+
+        <!-- Cuando el evento onSubmit , suceda se va pasar todo el formulario 'productForm' -->
+        <form #productForm="ngForm" (ngSubmit)="onSubmit(productForm)">
+            <p class="pantalla"><strong>Datos de compra</strong></p>
+            <!-- TO UPDATE -->
+            <input type="hidden" name="$key" #$key="ngModel" [(ngModel)]="productService.selectedProduct.$key">
+
+            <div class="form-group">
+                <input type="text" class="form-control inputNombre" name="name" #name="ngModel"
+                    [(ngModel)]="productService.selectedProduct.name" placeholder="Nombre Cliente" >
+            </div>
+            <div class="form-group">
+                <input type="text" class="form-control" name="category" #dui="ngModel"
+                    [(ngModel)]="productService.selectedProduct.dui" placeholder="DUI Cliente" >
+            </div>
+            <div class="form-group">
+                <input type="text" class="form-control" name="visi" #visita="ngModel"
+                    [(ngModel)]="productService.selectedProduct.visita" placeholder="Número Visita" >
+            </div>
+            <div class="form-group">
+                <p class="pantalla"><strong>Datos de Producto</strong></p>
+                <select class="form-control" placeholder="Seleccione Producto" name="producto" id="producto"  #category="ngModel" [(ngModel)]="categoria" (change)="capturar()">
+                <!-- <select name="producto" id="producto" #category="ngModel" [(ngModel)]="productService.selectedProduct.category"> -->
+                    <option *ngFor="let list of Listas" [ngValue]="list.category">
+                        {{list.category}}
+                    </option>
+                </select>
+            </div>
+            <div class="form-group">
+                <input type="text" class="form-control" placeholder="ID Producto" name="id" #id="ngModel"
+                    [(ngModel)]="ide" placeholder="ID Producto" disabled>
+            </div>
+            <div class="form-group">
+                <input type="text" class="form-control" placeholder="Precio Producto" name="price" #price="ngModel"
+                    [(ngModel)]="precio" placeholder="Precio Producto" disabled>
+            </div>
+            <div class="form-group">
+                <div class="input-group">
+                    <input type="number" class="form-control" placeholder="Cantidad" name="cantidad" #cantidad="ngModel"
+                        [(ngModel)]="productService.selectedProduct.cantidad" placeholder="Cantidad" min="0" >
+                </div>
+            </div>
+
+            <div class="form-group botones">
+                <button class="btn btn-primary" type="submit">
+                    <i class="fas fa-plus-circle"></i> Agregar Venta y Generar Ticket
+                </button>
+                <button class="btn btn-secondary limpiar" type="reset" (click)="resetForm(productForm)">
+                    <i class="fas fa-sync-alt"></i> Reiniciar
+                </button>
+            </div>
+        </form>
+    </div>
+</div>

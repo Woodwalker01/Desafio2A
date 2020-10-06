@@ -1,0 +1,45 @@
+<div class="card">
+    <div class="card-body">
+        <h6 class="text-center">
+            <p class="banner-tabla"><strong>Ventas realizadas</strong></p>
+        </h6>
+        <table class="table table-sm table-hover">
+            <tbody>
+                <tr>
+                    <!-- <td>Llave</td> -->
+                    <td>Nombre</td>
+                    <td>DUI</td>
+                    <td>Producto</td>
+                    <td>ID</td>
+                    <td>visita</td>
+                    <td>Precio</td>
+                    <td>Cantidad</td>
+                    <td>Descuento</td>
+                    <td>Total</td>
+                    
+                </tr>
+                <tr *ngFor="let product of productList">
+                    <!-- <td>{{product.$key}}</td>               -->
+                    <td>{{product.name}}</td>
+                    <td>{{product.dui}}</td>
+                    <td>{{product.category}}</td>
+                    <td>{{product.id}}</td>
+                    <td>{{product.visita}}</td>
+                    <td>{{product.price}}</td>
+                    <td>{{product.cantidad}}</td>
+                    <td>{{product.descuento}}</td>
+                    <td>{{product.total}}</td>
+                    <td>
+                        <a class="btn btn-secondary text-white" (click)="onEdit(product)">
+                            <i class="far fa-edit"></i>
+                        </a>
+                        <a class="btn btn-danger text-white" (click)="onDelete(product.$key)">
+                            <i class="fas fa-trash-alt"></i>
+                        </a>
+                        <button (click)="generatePDF(product)">PDF</button>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>

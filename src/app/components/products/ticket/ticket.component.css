@@ -1,0 +1,37 @@
+.encabezado{
+    text-align: center;
+    font-size: 12px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+.cuerpo{
+    text-align: left;
+    font-size: 12px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+.contorno{
+    border: solid black;
+    padding: 3%;
+    margin-top: 5%;
+    margin-left: 15%;
+    margin-right: 8%;
+}
+
+.ajuste{
+    padding: 3%;
+    margin-top: 5%;
+    margin-left: 15%;
+    margin-right: 8%;
+}
+
+table {
+    border-collapse: collapse;
+    width: 100%;
+  }
+  
+  th, td {
+    padding: 8px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+  } 

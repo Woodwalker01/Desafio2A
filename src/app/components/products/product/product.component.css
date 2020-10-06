@@ -1,0 +1,21 @@
+.panel{
+    background-color: rgb(48, 226, 197);
+}
+
+.botones{
+    background-color: rgb(24, 112, 98);
+}
+
+.limpiar{
+    float: right;
+}
+.pantalla{
+    color: black;
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 25px;
+}
+
+.inputNombre{
+    color: yellow;
+}

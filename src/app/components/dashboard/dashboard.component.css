@@ -1,0 +1,18 @@
+.banner {
+    color: black;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    text-transform: uppercase;
+    text-align: center;
+    font-size: 9rem;
+}
+
+.mensaje{
+    color: black;
+    text-align: justify;
+    font-size: 3rem;
+}
+
+.carrito {
+    width: 35rem;
+    height: 35rem;;
+}

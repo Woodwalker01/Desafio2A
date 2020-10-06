@@ -1,0 +1,31 @@
+.titulo{
+    color: black;
+    text-transform: uppercase;
+    text-align: center;
+    font-size: 50px;
+}
+
+.margen{
+    padding: 2%;
+    background-color: rgb(197, 197, 197);
+}
+
+.forgotPassword{
+    float: center;
+}
+
+.alejate{
+    margin: 4px 10px;
+}
+
+.alejate2{
+    margin: 4px 10px;
+    font-size: 20px;
+    border-radius: solid black;
+    text-decoration-style: solid;
+}
+
+.py-5{
+    background-image: url("https://lh3.googleusercontent.com/proxy/wEfbXph8MXBRbAqJZHZgcbQrtmTi9jPlwUadTyeuPeQzHuF-JyoNvTmk7Vj-ACorx_J9iexF4x8zMkQ8CkWU8aW5jpsxQFZnRdDBd9tqNscGEVqqDiAcq9vfdo0K");
+    background-color: #cccccc;
+}
